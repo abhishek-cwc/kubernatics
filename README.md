@@ -3,4 +3,5 @@ List all pods
 	
 Create Pod
 	imperative cmd => kubectl create -f firstpod.yaml
+	
 	declarative cmd => kubectl apply -f firstpod.yaml
