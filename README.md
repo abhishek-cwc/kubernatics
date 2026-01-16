@@ -15,6 +15,7 @@
 	kubectl get svc
 
 **Node Port**	
+
 	kubectl expose pod myfirstpod --type=NodePort --port=8000 --target-port=80 --name myfirstservice1
 		
 	
