@@ -5,9 +5,10 @@ metadata:
   name: myfirstpod
   labels:
     env: prod
+    type: app
 
 spec:
   containers:
-    - name: containername
+    - name: firstcontainer
       image: coolgourav147/nginx-custom
 
