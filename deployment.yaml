@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: fdeploy
+  labels:
+     appname: fdeploy
+  annotations:
+     kubernetes.io/change-cause: "deploy v2 version"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: app
+  template:
+    metadata:
+      name: myfirstpod
+      labels:
+        type: app
+    spec:
+      containers:
+        - name: firstcontainer
+          image: coolgourav147/nginx-custom
+

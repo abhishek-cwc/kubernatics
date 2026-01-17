@@ -28,5 +28,10 @@
 
 	kubectl scale rc --replicas=2 replicationcontrollername
 	
+**Rollout/deployment History**
+
+	kubectl rollout history deployment deploymentname	
+	
+	kubectl rollout undo --to-revision=2 deployment deploymentname 
 		
 	
