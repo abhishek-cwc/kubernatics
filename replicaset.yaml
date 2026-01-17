@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+
+metadata:
+  name: firstreplicaset
+  labels:
+     appname: fe
+spec:
+  replicas: 2
+  selector:
+    matchExpressions:
+      - key: type
+        operator: In
+        values:
+          - app
+          - app2
+  template:
+    metadata:
+      name: myfirstpod
+      labels:
+        type: app
+    spec:
+      containers:
+        - name: firstcontainer
+          image: coolgourav147/nginx-custom
+
