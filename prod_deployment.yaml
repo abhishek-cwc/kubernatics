@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: proddeploy
+  namespace: prod
+  labels:
+     appname: proddeploy
+  annotations:
+     kubernetes.io/change-cause: "deploy v2 version"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      type: prod
+  template:
+    metadata:
+      name: prod
+      labels:
+        type: prod
+    spec:
+      containers:
+        - name: prodcontainer
+          image: abhi86pathak/abhi_nginx:v2
+

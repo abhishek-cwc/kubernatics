@@ -10,5 +10,5 @@ metadata:
 spec:
   containers:
     - name: firstcontainer
-      image: coolgourav147/nginx-custom
+      image: abhi86pathak/abhi_nginx:v2
 

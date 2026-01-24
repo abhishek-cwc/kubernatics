@@ -32,6 +32,12 @@
 
 	kubectl rollout history deployment deploymentname	
 	
-	kubectl rollout undo --to-revision=2 deployment deploymentname 
+	kubectl rollout undo --to-revision=2 deployment deploymentname
+	
+**Name Space**
+	kubectl create ns test
+	kubectl apply -f fpod.yaml --namespace test
+	kubectl get po -n test
+	kubectl get pods --all-namespaces
 		
 	
